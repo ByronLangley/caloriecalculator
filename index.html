@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Byron’s Calorie Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Byron’s Calorie Calculator</h1>
+
+    <section class="calculator-section">
+      <h2>1. Initial Weight Input</h2>
+      <input type="number" id="initialWeight" placeholder="Enter your weight" />
+      <select id="initialUnit">
+        <option value="lb">lb</option>
+        <option value="kg">kg</option>
+      </select>
+      <button onclick="getCalorieTarget()">Get my calorie target</button>
+      <p id="calorieTarget"></p>
+    </section>
+
+    <section class="calculator-section">
+      <h2>2. Daily Weigh-Ins (2 Weeks)</h2>
+      <p>
+        In the box below, enter your weight each morning.<br />
+        For best results, weigh yourself after using the bathroom, before eating,
+        and without clothes.
+      </p>
+
+      <div id="weekInputsBox">
+        <select id="dailyUnit">
+          <option value="lb">lb</option>
+          <option value="kg">kg</option>
+        </select>
+
+        <div class="weights">
+          <div>
+            <h3>Week 1</h3>
+            <div id="week1Inputs"></div>
+          </div>
+          <div>
+            <h3>Week 2</h3>
+            <div id="week2Inputs"></div>
+          </div>
+        </div>
+      </div>
+
+      <button id="calculateButton" onclick="calculateCalories()">Calculate my calorie burn</button>
+      <p id="results"></p>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
