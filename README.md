@@ -1,39 +1,41 @@
 # Byron’s Calorie Calculator
 
-Track your average weight over 2 weeks and find out how many calories you're really burning — whether you're in a surplus or deficit.
+Track your true calorie needs over 2 weeks by averaging your weight changes. Perfect for figuring out your real maintenance calories.
 
 ## ✨ Features
 
-- Modern dark mode design
-- Fully mobile responsive
-- Unit toggle for kg/lb
-- Clear calorie recommendations
-- Easy-to-use daily weight tracker
-- Accurate surplus/deficit and maintenance estimates
+- Dark mode, mobile responsive
+- Unit toggle (kg or lb)
+- Accurate calorie burn estimates
+- 14-day weight tracker
+- Instant results with clean layout
+- Disclaimer included
 
 ## 🔧 How to Use
 
 1. Download or clone the repository.
 2. Open `index.html` in your browser.
-3. Enter your starting weight and choose lb or kg.
+3. Enter your initial weight and select the unit (lb or kg).
 4. Click “Get my calorie target”.
-5. Fill in 14 daily weigh-ins (Week 1 and Week 2).
+5. Enter your daily morning weights (Week 1 and Week 2).
 6. Click “Calculate my calorie burn”.
-7. Your results will be shown instantly.
+7. See your results for surplus/deficit and daily calorie burn.
 
-## 📁 File Overview
+## 📁 Files
 
-- `index.html` — Structure and layout
-- `style.css` — Styling for dark mode, layout, and responsiveness
-- `script.js` — JavaScript logic for calculations and interaction
-- `README.md` — This file
+- `index.html` — Main page structure
+- `style.css` — Styling and responsiveness
+- `script.js` — JavaScript functionality
+- `README.md` — How to use and setup
 
-## 🖥 Run Locally
+## 📥 Running Locally
 
-1. Place all files in the same folder.
-2. Double-click `index.html` to open in a browser.
-3. You're good to go.
+1. Place all files into the same folder.
+2. Open `index.html` with your preferred web browser.
+3. You're all set!
 
 ---
 
-Built with 💪 for real results. Byron-style.
+**Disclaimer:**  
+This calculator provides an estimate based on the information you enter and is for informational purposes only.  
+It should not be considered medical advice. Always consult a healthcare professional for personalised guidance.
