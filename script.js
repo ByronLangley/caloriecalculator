@@ -44,3 +44,4 @@ function calculateAdjustment() {
   document.getElementById('finalResult').innerText = 
     `Your adjusted maintenance calories are approximately ${Math.round(finalCalories)} calories per day.`;
 }
+
