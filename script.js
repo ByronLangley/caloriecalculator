@@ -1,3 +1,5 @@
+let baseCalories = 0;
+
 document.addEventListener('DOMContentLoaded', () => {
   const week1 = document.getElementById('week1Inputs');
   const week2 = document.getElementById('week2Inputs');
@@ -21,9 +23,9 @@ function getCalorieTarget() {
   const weight = parseFloat(document.getElementById('initialWeight').value);
   const unit = document.getElementById('initialUnit').value;
   if (isNaN(weight)) return;
-  const factor = unit === 'lb' ? 15 : 33.07;
-  const target = Math.round(weight * factor);
-  document.getElementById('calorieTarget').textContent = `For the next 2 weeks you should eat ${target} calories per day.`;
+  const factor = unit === 'lb' ? 16 : 35.274;
+  baseCalories = Math.round(weight * factor);
+  document.getElementById('calorieTarget').textContent = `For the next 2 weeks you should eat ${baseCalories} calories per day.`;
 }
 
 function calculateCalories() {
@@ -37,17 +39,18 @@ function calculateCalories() {
   const totalCalorieChange = diff * calorieFactor;
   const dailyChange = Math.round(totalCalorieChange / 14);
 
-  let status = dailyChange > 0 ? 'surplus' : 'deficit';
-  if (dailyChange === 0) status = 'maintenance';
+  let status = dailyChange > 0 ? 'surplus' : (dailyChange < 0 ? 'deficit' : 'maintenance');
 
-  const initWeight = parseFloat(document.getElementById('initialWeight').value);
-  const initUnit = document.getElementById('initialUnit').value;
-  const baseCalories = initWeight * (initUnit === 'lb' ? 15 : 33.07);
-  const maintenance = Math.round(baseCalories + dailyChange);
+  let finalCalories = baseCalories;
+  if (status === 'deficit') {
+    finalCalories += Math.abs(dailyChange);
+  } else if (status === 'surplus') {
+    finalCalories -= Math.abs(dailyChange);
+  }
 
   document.getElementById('results').innerHTML = `
     Over the past 2 weeks you were in a ${Math.abs(dailyChange)} calorie ${status}.<br>
-    You burn ${maintenance} calories in a day.
+    You burn approximately ${finalCalories} calories in a day.
   `;
 }
 
