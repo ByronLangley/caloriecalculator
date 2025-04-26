@@ -1,5 +1,5 @@
 body {
-  background-color: #121212;
+  background-color: #121211;
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
@@ -123,3 +123,4 @@ input[type="number"]::placeholder {
     align-items: center;
   }
 }
+
